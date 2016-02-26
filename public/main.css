@@ -1,0 +1,31 @@
+
+body {
+  background-image: url(https://farm4.staticflickr.com/3933/14919486574_0f94bedf92_b.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.content {
+  shape
+}
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 70vh 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-.2px);
+}

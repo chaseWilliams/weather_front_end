@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-<script type="text/javascript" src="./helper.js"></script>
+<script type="text/javascript" src="/helper.js"/>
+<link rel="stylesheet" href="/main.css" type="text/css" />
 </script>
 </head>
 
 <body>
+<style>
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 100vh 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+</style>
+<script>
+// JavaScript File
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!'
+  }
+  methods: { myFunction: function() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+})
+}
+</script>
 
 <h1>My Web Page</h1>
 
 <p id="demo">A Paragraph</p>
 
 <button  v-on:click="myFunction()">Try it</button>
+
+<h4>Ok, now for the Parallax! </h4>
+<div class="parallax">
+  <p class="parallax__layer parallax__layer--back"> Yo, how you doing? </p>
+  <p class="parallax__layer parallax__layer--base"> How you doing? </p>
+</div>
 
 </body>
 </html>
