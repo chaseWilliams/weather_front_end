@@ -1,0 +1,117 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma;
+}
+
+span {
+  color: #3CC149;
+  background-color: #0D1F22;
+  width: 30wh;
+}
+
+b {
+  font-style: italic;
+  font-weight: normal;
+}
+
+emphasis {
+  font-size: 1.2rem;
+  color: #3CC149;
+}
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+.flex-division {
+  background-color: red;
+  width: 6px;
+  height: 500px;
+  flex-basis: 1;
+}
+.flex-item {
+  margin-top: 10px;
+  line-height: 150px;
+  text-align: center;
+}
+
+.top {
+  padding-bottom: 0;
+}
+
+#first {
+  padding-top: 70%;
+}
+
+h3 {
+  font-family: cursive;
+  font-size: 2rem;
+}
+.header {
+  font-size: 6rem;
+  text-align: center;
+}
+.parallax {
+   height: 500px; /* fallback for older browsers */
+   height: 70vh;
+   overflow-x: hidden;
+   overflow-y: auto;
+   -webkit-perspective: 300px;
+   perspective: 300px;
+   font-size: 2em;
+   text-align: center;
+ }
+
+ .parallax__group {
+   position: relative;
+   height: 500px; /* fallback for older browsers */
+   height: 100vh;
+   -webkit-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+ }
+
+ .parallax__layer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+ }
+
+ .parallax__layer--fore {
+   -webkit-transform: translateZ(90px) scale(.7);
+   transform: translateZ(90px) scale(.7);
+   z-index: 1;
+ }
+
+ .parallax__layer--base {
+   -webkit-transform: translateZ(0);
+   transform: translateZ(0);
+   z-index: 4;
+   background: #C1DBE3;
+   width: 100wh;
+   color: #2c0b05;
+ }
+
+ .parallax__layer--back {
+   -webkit-transform: translateZ(-300px) scale(2);
+   transform: translateZ(-300px) scale(2);
+   z-index: 3;
+   font-size: 7rem;
+ }
+
+ .parallax__layer--deep {
+   -webkit-transform: translateZ(-600px) scale(3);
+   transform: translateZ(-600px) scale(3);
+   z-index: 2;
+ }

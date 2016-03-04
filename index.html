@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body id="app" style="background-image: {{pic_url}};
+background-repeat: no-repeat;
+background-size: 100%;
+margin: 0;
+padding: 0;">
+  <div class="top">
+    <div class="header">
+      {{city}}
+    </div>
+  </div>
+  <div class="parallax" style="padding-top: 45%;">
+    <div class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <ul class="flex-container" >
+          <li class="flex-item">{{condition_name}}</li>
+          <li class="flex-item">{{condition_description}}</li>
+        </ul>
+        <ul class="flex-container" >
+          <li class="flex-item">Cloudiness: {{cloudiness}}</li>
+          <li class="flex-item">Windiness: {{windiness}}</li>
+          <li class="flex-item">Humidity: {{humidity}}
+        </ul>
+        <h3 style="width: 100wh; text-align: center;">Enter a Zip Code!</h3>
+        <input style="width: 100wh; text-align: center;" type="text" v-model="zipcode" placeholder="valid zipcode">
+        <ul class="flex-container" >
+          <li class="flex-item">{{wiki_title}}</li>
+          <li class="flex-item">{{wiki}}</li>
+        </ul>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <span> Temperature: {{temp}} </span>
+      </div>
+    </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.16/vue-resource.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
