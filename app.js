@@ -1,4 +1,4 @@
-var api_url = 'localhost:9295/?'
+var api_url = 'http://router.gaedtechfair.apcera-platform.io/?'
 new Vue({
   el: '#app',
   data: {
@@ -30,6 +30,10 @@ new Vue({
     'lat': 'fetch_data'
   },
 
+  created: function () {
+    this.get_data();
+  },
+
   methods: {
     get_data: function () {
       if (this.zipcode.length == 5) {
@@ -57,6 +61,7 @@ new Vue({
           else if( err.code == 2) {
            console.log("Error: Position is unavailable!");
           }
+          self.fetch_data(34, -84);
         }
       }
     },
@@ -81,7 +86,7 @@ new Vue({
         this.$set('wiki', data.data.article.extract)
         this.$set('wiki_title', data.data.article.title)
         this.$set('city', weather.city)
-        this.$set('zipcode', ' ')
+        this.$set('zipcode', weather.zipcode)
       }.bind(this));
     }
   }
