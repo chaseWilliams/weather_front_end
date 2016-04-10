@@ -16,6 +16,8 @@ continuum*
 .dat*
 .repl_history
 build/
+
+dump.rbd
 ​
 ## Documentation cache and generated files:
 /.yardoc/

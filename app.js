@@ -1,4 +1,4 @@
-var api_url = 'http://router.gaedtechfair.apcera-platform.io/?'
+var api_url = 'http://router.roswell.apcera-platform.io/?'
 new Vue({
   el: '#app',
   data: {

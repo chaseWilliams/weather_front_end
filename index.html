@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Document</title>
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+  <title>Weather Mashup</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body id="app" >
@@ -28,8 +28,8 @@
         <h3 style="width: 100wh; text-align: center;">Enter a Zip Code!</h3>
         <input style="width: 100wh; text-align: center;" v-on:keyup.enter="get_data" placeholder="valid zipcode">
         <ul class="flex-container" >
-          <li class="flex-item"><em>{{wiki_title}}</em></li>
-          <li class="flex-item"><em>{{{wiki}}}</em></li>
+          <li class="text-center"><em>{{wiki_title}}</em></li>
+          <li class="text-center"><em>{{{wiki}}}</em></li>
         </ul>
       </div>
       <div class="parallax__layer parallax__layer--back">
