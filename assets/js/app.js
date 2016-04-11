@@ -22,7 +22,12 @@ new Vue({
   computed: {
     background_style: function(){
     return {'background-image': 'url("'+this.pic_url+'")'}
-  }
+    },
+    url_to_wiki: function(){
+      var baseurl = 'https://en.wikipedia.org/wiki/'
+      var title = this.$get(wiki_title).replace(' ', '_')
+      return {'href': '' + baseurl + title}
+    }
   },
 
   watch: {
@@ -71,7 +76,7 @@ new Vue({
       console.log(lat + ' ' + lon)
       var endpoint = api_url + "lat=" + lat + "&lon=" + lon
       console.log('endpoint is ' + endpoint)
-      this.$http.get(endpoint).then(function(data) {
+      $.get(endpoint).then(function(data) {
         console.log("Data  is");
         console.log(data.data)
         //set all of the data to updated weather stats
