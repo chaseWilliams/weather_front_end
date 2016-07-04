@@ -22,7 +22,7 @@
 			</header>
 
 		<!-- Banner -->
-			<section id="banner">
+			<section id="banner" :style="background_style">
 				<div class="inner">
 					<h2 class="major special">{{city}}</h2>
 					<p>{{condition_description}}</p>
@@ -68,9 +68,9 @@
 				<section class="spotlight">
 					<div class="content">
 						<h3 class="major">{{wiki_title}}</h3>
-						<p>{{wiki}}</p>
+						<p>{{{wiki}}}</p>
 						<ul class="actions">
-							<li><a :style="url_to_wiki" class="button">Read More!</a></li>
+							<li><a href="url_to_wiki" class="button">Read More!</a></li>
 						</ul>
 					</div>
 				</section>
