@@ -1,4 +1,4 @@
-var api_url = 'http://router.roswell.apcera-platform.io/?'
+var api_url = window.location.protocol + '//' + window.location.hostname + '/api?'
 new Vue({
   el: '#app',
   data: {
