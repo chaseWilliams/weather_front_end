@@ -17,6 +17,9 @@ continuum*
 .repl_history
 build/
 
+#ignore picture files
+*.jpg
+
 dump.rbd
 ​
 ## Documentation cache and generated files:
